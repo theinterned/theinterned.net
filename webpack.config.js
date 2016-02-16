@@ -17,10 +17,22 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin()
   ],
   module: {
-    loaders: [{
-      test: /\.js$/,
-      loaders: ['react-hot', 'babel'],
-      include: path.join(__dirname, 'src')
-    }]
+    loaders: [
+      {
+        test: /\.js$/,
+        loaders: ['react-hot', 'babel'],
+        include: path.join(__dirname, 'src')
+      },
+      {
+        test: /\.scss$/, // sass that's NOT in /app/css/ dir - uses the css-modules plugin
+        exclude: [/src\/global.scss/],
+        loaders: ['style?sourceMap', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]', 'sass' ]
+      },
+      {
+        test: /\.scss$/, // sass that IS in /app/css/ dir - doesn't transform the class-names with the css-modules plugin
+        include: [/src\/global.scss/],
+        loaders: [ 'style?sourceMap', 'css', 'sass' ]
+      }
+    ]
   }
 };
