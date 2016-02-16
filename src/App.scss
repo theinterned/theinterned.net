@@ -1,0 +1,43 @@
+$color-border: #ccc;
+.app {}
+.title {
+  font-size: 6rem;
+  line-height: 1;
+  text-align: center;
+  font-style: italic;
+  font-weight: normal;
+  border-width: .4rem 0;
+  border-style: double;
+  border-color: $color-border;
+  padding: 3.6rem 0;
+  margin: 0;
+}
+.links {
+  list-style: none;
+  padding: 2rem 0;
+  margin: 6rem 0 0;
+  width: 100%;
+  float: left;
+  // border-bottom: 0.1rem solid $color-border;
+  border-width: .1rem 0;
+  border-style: double;
+  border-color: $color-border;
+}
+.link {
+  display: block;
+  float: left;
+  width: #{(1/4)*100}%;
+  text-align: center;
+}
+.blurb {
+  clear: left;
+  width: 80%;
+  max-width: 36em;
+  margin: 4rem auto 0;
+  & p:first-child:first-line { font-weight: bold; }
+}
+.CV {
+  font-weight: bold;
+  // text-transform: uppercase;
+  a { text-decoration: none; }
+}
