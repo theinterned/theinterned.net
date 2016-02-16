@@ -29,11 +29,12 @@ class App extends Component {
           <p>Yes this website is very bare-bones: It's <a href="https://github.com/theinterned/theinterned.net">
             under construction</a> like all of the web! I'm looking for work now
             and wanted to get something up ASAP &mdash; <a href="mailto:ned@theinterned.net?subject=let%27s%20work%20together%20to%20make%20the%20internet%20great!">Hire me!</a></p>
-          <p styleName="CV">
-            <a href=""><span className="emoji">🌐</span> Here's my CV as a PDF</a>
+          <p styleName="CV_dl">
+            <a href="https://www.dropbox.com/s/3jxewz8yj4mg9tz/Ned_Schwartz_CV.pdf?dl=0"><span className="emoji">🌐</span> Here's my CV as a PDF</a>
           </p>
         </div>
         <ul styleName="links">
+          <li styleName="link" className="CV"><a href="https://www.dropbox.com/s/3jxewz8yj4mg9tz/Ned_Schwartz_CV.pdf?dl=0">CV</a></li>
           <li styleName="link" className="dribbble"><a href="https://dribbble.com/theinterned">Dribbble</a></li>
           <li styleName="link" className="github"><a href="https://github.com/theinterned">Github</a></li>
           <li styleName="link" className="instapaper"><a href="https://www.instapaper.com/p/theinterned">Instapaper</a></li>
