@@ -5,6 +5,7 @@ import styles from './App.scss';
 
 class App extends Component {
   render() {
+    let year = new Date().getFullYear();
     return (
       <div className="app">
         <h1 styleName='title'>Hi, I'm Ned</h1>
@@ -40,6 +41,9 @@ class App extends Component {
           <li styleName="link" className="instapaper"><a href="https://www.instapaper.com/p/theinterned">Instapaper</a></li>
           <li styleName="link" className="linkdin"><a href="https://ca.linkedin.com/in/neddo">Linkedin</a></li>
         </ul>
+        <footer styleName="foot">
+          <p>&copy; {year} Ned Schwartz &bull; <a href="https://raw.githubusercontent.com/theinterned/theinterned.net/master/LICENSE">MIT license</a>.</p>
+        </footer>
       </div>
     );
   }

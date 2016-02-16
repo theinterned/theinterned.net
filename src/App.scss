@@ -1,4 +1,5 @@
 $color-border: #ccc;
+$sans: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, sans-serif;
 .app {}
 .title {
   font-size: 6rem;
@@ -18,7 +19,7 @@ $color-border: #ccc;
   margin: 6rem 0 0;
   width: 100%;
   float: left;
-  // border-bottom: 0.1rem solid $color-border;
+  font-family: $sans;
   border-width: .1rem 0;
   border-style: double;
   border-color: $color-border;
@@ -28,6 +29,7 @@ $color-border: #ccc;
   float: left;
   width: #{(1/5)*100}%;
   text-align: center;
+  font-weight: 600;
 }
 .blurb {
   clear: left;
@@ -37,7 +39,12 @@ $color-border: #ccc;
   & p:first-child:first-line { font-weight: bold; }
 }
 .CV_dl {
+  font-family: $sans;
   font-weight: bold;
-  // text-transform: uppercase;
   a { text-decoration: none; }
+}
+.foot {
+  clear: left;
+  text-align: center;
+  padding-top: 2rem;
 }
