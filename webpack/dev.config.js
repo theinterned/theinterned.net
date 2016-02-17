@@ -21,7 +21,8 @@ module.exports = {
       {
         test: /\.js$/,
         loaders: ['react-hot', 'babel'],
-        include: path.join(__dirname, 'src')
+        // include: path.join(__dirname, 'src')
+        exclude: /node_modules/
       },
       {
         test: /\.scss$/, // sass that's NOT in /app/css/ dir - uses the css-modules plugin

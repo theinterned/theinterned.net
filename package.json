@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "description": "Portfolio of Ned Schwartz",
   "scripts": {
-    "start": "node server.js",
+    "start": "node webpack/dev-server.js",
     "lint": "eslint src"
   },
   "repository": {
