@@ -1,0 +1,31 @@
+// these styles are excluded from the CSSModules plugin so the classes and element names apply globally!
+
+@import 'lib/css/index';
+
+html { font-size: 62.5%; } /* =10px */
+body {
+  font-size: 1.6rem; /* =16px */
+  line-height: 2rem;
+  font-family: $sans;
+  color: $c-text;
+  max-width: 84rem;
+  margin: 0 auto;
+  padding: 2rem;
+  @media screen and (min-width:400px) {
+    padding: 4rem 6rem;
+  }
+}
+a {
+  color: $c-link;
+  &:visited { color: $c-link-visited; }
+  &:hover { color: $c-link-hover; }
+}
+
+* {
+  margin: 0;
+}
+* + * {
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+}
+.emoji { font-weight: normal; }

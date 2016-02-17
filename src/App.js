@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CSSModules from 'react-css-modules';
-import globalStyles from './global.scss';
+import globalStyles from '../lib/css/global.scss';
 import styles from './App.scss';
 
 class App extends Component {
@@ -8,7 +8,7 @@ class App extends Component {
     let year = new Date().getFullYear();
     return (
       <div className="app">
-        <h1 styleName='title'>Hi, I'm Ned</h1>
+        <h1 styleName='title'>Hi, I&rsquo;m Ned</h1>
         <div styleName="blurb">
           <p>I’m a seasoned web developer and designer with over 15 years of
             experience working on high profile, heavily-trafficked websites.</p>
@@ -19,19 +19,11 @@ class App extends Component {
             responsive interface. Carta is a rich and non-trivial business app
             and I learned a great deal about balancing complexity and ease of
             use.</p>
-          <p>I pride myself on writing beautiful, semantic code that is
-            cross-browser compatible and standards compliant. I specializes in
-            authoring rich user experiences with the latest web technologies.
-            I’m a trained artist and a strong UI and UX designer with an
-            interest in user-focused design practices. I’m creative, fastidious,
-            dedicated, ambitious and helpful. I enjoy problem solving,
-            collaboration and knowledge-sharing. I’m a quick study and eager
-            contributor.</p>
           <p>Yes this website is very bare-bones: It's <a href="https://github.com/theinterned/theinterned.net">
             under construction</a> like all of the web! I'm looking for work now
             and wanted to get something up ASAP &mdash; <a href="mailto:ned@theinterned.net?subject=let%27s%20work%20together%20to%20make%20the%20internet%20great!">Hire me!</a></p>
           <p styleName="CV_dl">
-            <a href="https://www.dropbox.com/s/3jxewz8yj4mg9tz/Ned_Schwartz_CV.pdf?dl=0"><span className="emoji">🌐</span> Here's my CV as a PDF</a>
+            <a href="https://www.dropbox.com/s/3jxewz8yj4mg9tz/Ned_Schwartz_CV.pdf?dl=0">↬ Here's my CV as a PDF</a>
           </p>
         </div>
         <ul styleName="links">

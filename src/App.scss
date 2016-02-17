@@ -1,45 +1,69 @@
-$color-border: #ccc;
-$sans: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, sans-serif;
-.app {}
+@import 'lib/css/index';
+
 .title {
   font-size: 6rem;
+  font-family: serif;
   line-height: 1;
   text-align: center;
   font-style: italic;
   font-weight: normal;
-  border-width: .4rem 0;
-  border-style: double;
-  border-color: $color-border;
-  padding: 3.6rem 0;
+  // border-width: .4rem 0;
+  // border-style: double;
+  // border-color: $c-border;
+  padding: 18rem 0;
   margin: 0;
+  background-color: $c-background;
+  box-shadow: 1rem 1rem $c-border;
 }
 .links {
   list-style: none;
-  padding: 2rem 0;
-  margin: 6rem 0 0;
+  padding: 1.6rem 0;
+  margin: 0;
   width: 100%;
   float: left;
-  font-family: $sans;
-  border-width: .1rem 0;
+  border-width: .4rem 0;
   border-style: double;
-  border-color: $color-border;
+  border-color: $c-border;
+  // background-color: $c-background;
+  // box-shadow: 1rem 1rem $c-border;
 }
 .link {
   display: block;
-  float: left;
-  width: #{(1/5)*100}%;
-  text-align: center;
+  margin: 0;
   font-weight: 600;
+  letter-spacing: .2rem;
+  a { text-decoration: none; }
+  @media screen and (max-width:39.99rem) {
+    line-height: 3rem;
+  }
+  @media screen and (min-width:40rem) {
+    float: left;
+    width: #{(1/5)*100}%;
+    text-align: center;
+  }
 }
 .blurb {
   clear: left;
+  margin: 0 auto;
+  padding: 6rem 0;
+  & > * {
+    $opacity: .2;
+    $duration: .2s;
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        opacity: #{1 - ($i*$opacity)};
+        transition: opacity #{$duration} #{($i*.75 - 1)*$duration};
+      }
+    }
+  }
+  &:hover > * {
+    opacity: 1;
+  }
   width: 80%;
   max-width: 36em;
-  margin: 4rem auto 0;
   & p:first-child:first-line { font-weight: bold; }
 }
 .CV_dl {
-  font-family: $sans;
   font-weight: bold;
   a { text-decoration: none; }
 }
