@@ -7,45 +7,80 @@
   text-align: center;
   font-style: italic;
   font-weight: normal;
-  // border-width: .4rem 0;
-  // border-style: double;
-  // border-color: $c-border;
-  padding: 18rem 0;
-  margin: 0;
-  background-color: $c-background;
-  box-shadow: 1rem 1rem $c-border;
+  border-width: 1.5rem;
+  border-style: solid;
+  border-color: MistyRose;
+  padding: 18rem 2rem;
+  margin: 0 0 2rem;
+  background-color: white;
+  transition: box-shadow .3s, transform .3s;
+  &:hover {
+    box-shadow: 1rem 1rem $c-border;
+    transform: translate(-1rem, -1rem);
+  }
 }
 .links {
   list-style: none;
-  padding: 1.6rem 0;
   margin: 0;
+  padding: 0;
   width: 100%;
   float: left;
-  border-width: .4rem 0;
-  border-style: double;
-  border-color: $c-border;
-  // background-color: $c-background;
-  // box-shadow: 1rem 1rem $c-border;
+  // border-width: .2rem 0;
+  // border-style: solid;
+  // border-color: $c-border;
+  @media screen and (max-width:39.99rem) {
+    border-width: .2rem 0;
+    border-style: solid;
+    border-color: $c-border;
+  }
 }
 .link {
   display: block;
   margin: 0;
   font-weight: 600;
   letter-spacing: .2rem;
-  a { text-decoration: none; }
+  background-color: white;
   @media screen and (max-width:39.99rem) {
     line-height: 3rem;
+    margin-bottom: -.2rem;
   }
+  padding: .2rem 0;
   @media screen and (min-width:40rem) {
     float: left;
-    width: #{(1/5)*100}%;
     text-align: center;
+    width: #{(1/5)*100}%;
+    border-width: .2rem 0;
+    border-style: solid;
+    border-color: $c-border;
+    transition: padding .2s, margin .2s, background-color 1s .1s;
+    &:hover {
+      background-color: $c-border;
+      padding: .6rem 0;
+      margin: -.4rem 0;
+    }
   }
+  a {
+    @include c-link($c-text, $visited:$c-text);
+    text-decoration: none;
+    display: block;
+    padding: 1rem 0;
+    background-color: $c-background;
+    text-decoration: none;
+    border-width: .2rem 0;
+    border-style: solid;
+    border-color: $c-border;
+    transition: background-color .5s .15s;
+    &:hover {
+      background-color: white;
+    }
+  }
+
 }
 .blurb {
+  display: none;
   clear: left;
   margin: 0 auto;
-  padding: 6rem 0;
+  padding: 5rem 0;
   & > * {
     $opacity: .2;
     $duration: .2s;
@@ -68,7 +103,15 @@
   a { text-decoration: none; }
 }
 .foot {
-  clear: left;
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 4rem;
+  clear: left;
+  @media screen and (min-width:40rem) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $c-background;
+    & > * { opacity: .2; }
+  }
 }

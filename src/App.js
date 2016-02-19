@@ -8,7 +8,17 @@ class App extends Component {
     let year = new Date().getFullYear();
     return (
       <div className="app">
-        <h1 styleName='title'>Hi, I&rsquo;m Ned</h1>
+        <h1 styleName='title'>Hi, I&rsquo;m Ned<br/>
+          &mdash;<br/>
+          I design & build<br/>
+          web apps.</h1>
+        <ul styleName="links">
+          <li styleName="link" className="CV"><a href="https://www.dropbox.com/s/3jxewz8yj4mg9tz/Ned_Schwartz_CV.pdf?dl=0">CV</a></li>
+          <li styleName="link" className="dribbble"><a href="https://dribbble.com/theinterned">Dribbble</a></li>
+          <li styleName="link" className="github"><a href="https://github.com/theinterned">Github</a></li>
+          <li styleName="link" className="instapaper"><a href="https://www.instapaper.com/p/theinterned">Instapaper</a></li>
+          <li styleName="link" className="linkdin"><a href="https://ca.linkedin.com/in/neddo">Linkedin</a></li>
+        </ul>
         <div styleName="blurb">
           <p>I’m a seasoned web developer and designer with over 15 years of
             experience working on high profile, heavily-trafficked websites.</p>
@@ -26,13 +36,6 @@ class App extends Component {
             <a href="https://www.dropbox.com/s/3jxewz8yj4mg9tz/Ned_Schwartz_CV.pdf?dl=0">↬ Here's my CV as a PDF</a>
           </p>
         </div>
-        <ul styleName="links">
-          <li styleName="link" className="CV"><a href="https://www.dropbox.com/s/3jxewz8yj4mg9tz/Ned_Schwartz_CV.pdf?dl=0">CV</a></li>
-          <li styleName="link" className="dribbble"><a href="https://dribbble.com/theinterned">Dribbble</a></li>
-          <li styleName="link" className="github"><a href="https://github.com/theinterned">Github</a></li>
-          <li styleName="link" className="instapaper"><a href="https://www.instapaper.com/p/theinterned">Instapaper</a></li>
-          <li styleName="link" className="linkdin"><a href="https://ca.linkedin.com/in/neddo">Linkedin</a></li>
-        </ul>
         <footer styleName="foot">
           <p>&copy; {year} Ned Schwartz &bull; <a href="https://raw.githubusercontent.com/theinterned/theinterned.net/master/LICENSE">MIT license</a>.</p>
         </footer>

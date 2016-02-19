@@ -1,0 +1,17 @@
+@import './colors';
+
+@mixin c-link($normal:$c-link, $hover:$c-link-hover, $active:$c-link-active, $visited:$c-link-visited, $focus:false) {
+  color: $normal;
+  @if $visited {
+    &:visited { color: $visited; }
+  }
+  @if $focus {
+    &:focus { color: $focus; }
+  }
+  @if $hover {
+    &:hover { color: $hover; }
+  }
+  @if $active {
+    &:active { color: $active; }
+  }
+}
