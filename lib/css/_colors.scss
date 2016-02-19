@@ -1,7 +1,18 @@
-$c-border: PowderBlue;
-$c-background: AliceBlue;
+// css colour names so that I can use Sass functions on them — Sass functions
+// don't work with named colours.
+// RGB vals taken from http://www.cssportal.com/css3-color-names/
+$AliceBlue  : rgb(240,248,255);
+$PowderBlue : rgb(176,224,230);
+$BlueViolet : rgb(138,43,226);
+$Blue       : rgb(0,0,255);
+$MediumBlue : rgb(0,0,205);
+$DarkBlue   : rgb(0,0,139);
 
-$c-text: DarkBlue;
-$c-link: Blue;
-$c-link-hover: MediumBlue;
-$c-link-visited: BlueViolet;
+
+$c-border: $PowderBlue;
+$c-background: $AliceBlue;
+
+$c-text: $DarkBlue;
+$c-link: $Blue;
+$c-link-hover: $MediumBlue;
+$c-link-visited: $BlueViolet;
