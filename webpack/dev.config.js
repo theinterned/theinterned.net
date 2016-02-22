@@ -15,7 +15,6 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: projectPath,
-    publicPath: publicPath
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()
@@ -30,8 +29,12 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loaders: ['style?sourceMap', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]', 'sass' ]
+        loaders: ['style', 'css?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]', 'autoprefixer?browsers=last 2 version', 'sass?outputStyle=expanded&sourceMap']
       }
+      // {
+      //   test: /\.scss$/,
+      //   loaders: ['style?sourceMap', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]', 'sass' ]
+      // }
     ]
   }
 };
