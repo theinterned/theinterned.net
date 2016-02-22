@@ -5,7 +5,7 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "node webpack/dev-server.js",
-    "build": "webpack --progress --colors --config webpack/build.config",
+    "build": "webpack --progress --verbose --colors --display-error-details --config webpack/build.config",
     "-build": "node webpack/build-server.js",
     "lint": "eslint src"
   },
@@ -55,6 +55,7 @@
   "dependencies": {
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
-    "webfontloader": "^1.6.21"
+    "webfontloader": "^1.6.21",
+    "webpack-isomorphic-tools": "^2.2.29"
   }
 }
