@@ -1,33 +1,37 @@
 @import 'lib/css/index';
+$bp-links: "screen and (min-width:40rem)";
 
 .title {
-  font-size: 6rem;
-  font-family: serif;
+  font-size: 4rem;
   line-height: 1;
+  margin: -1rem -1rem 3rem;
+  padding: 8rem 2rem 10rem;
+  font-family: serif;
   text-align: center;
   font-style: italic;
   font-weight: normal;
-  border-width: 1.5rem;
-  border-style: solid;
   border-color: MistyRose;
-  padding: 18rem 2rem;
-  margin: 0 0 3rem;
+  border-style: solid;
+  border-width: 1.5rem;
   background-color: white;
+  @media screen {
+    @media (min-width: 321px), (min-height: 569px) { // > iphone 5 screen
+      font-size: 5rem;
+    }
+    @media (min-width: 376px), (min-height: 628px) { // > iphone 6 screen
+      padding: 10rem 2rem 12rem;
+      margin: 0 0 3rem;
+    }
+    @media (min-width: 415px), (min-height: 737px) { // > iphone 6+ screen
+      font-size: 6rem;
+      padding: 18rem 2rem;
+    }
+  }
   // transition: box-shadow .3s, transform .3s;
   // &:hover {
   //   box-shadow: 1rem 1rem $c-border;
   //   transform: translate(-1rem, -1rem);
   // }
-  @media screen and (max-height: 736px) { // iphone 6 screen
-    padding: 10rem 2rem 12rem;
-  }
-  @media screen and (max-height: 627px) { // iphone 6 screen
-    padding: 6rem 2rem 8rem;
-  }
-  @media screen and (max-height: 568px) { // iphone 5 screen
-    font-size: 5rem;
-    margin: -1rem -1rem 3rem;
-  }
 }
 .links {
   list-style: none;
@@ -36,10 +40,10 @@
   width: 100%;
   padding: .2rem 0;
   background-color: white;
-  border-width: .2rem 0;
-  border-style: solid;
   border-color: $c-border;
-  @media screen and (min-width:40rem) {
+  border-style: solid;
+  border-width: .2rem 0;
+  @media #{$bp-links} {
     border: 0 none;
     padding: 0;
   }
@@ -58,13 +62,13 @@
   &:last-child a {
     border-bottom-width: .2rem;
   }
-  @media screen and (min-width:40rem) {
+  @media #{$bp-links} {
     padding: .2rem 0;
     float: left;
     width: #{(1/5)*100}%;
-    border-width: .2rem 0;
-    border-style: solid;
     border-color: $c-border;
+    border-style: solid;
+    border-width: .2rem 0;
     transition: padding .2s, margin .2s, background-color .3s .1s;
     &:hover {
       background-color: $c-border;
@@ -80,10 +84,10 @@
     text-decoration: none;
     transition: background-color .5s .15s;
     padding: 1rem 0;
-    border-style: solid;
     border-color: $c-border;
+    border-style: solid;
     border-width: .1rem 0;
-    @media screen and (min-width:40rem) {
+    @media #{$bp-links} {
       border-width: .2rem 0;
     }
     &:hover {
