@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../lib/components/webfontloader';
 import CSSModules from 'react-css-modules';
 import globalStyles from '../lib/css/global.scss';
 import styles from './App.scss';
