@@ -9,10 +9,11 @@ $MediumBlue : rgb(0,0,205);
 $DarkBlue   : rgb(0,0,139);
 
 
-$c-border: $PowderBlue;
 $c-background: $AliceBlue;
+$c-border: lighten($PowderBlue, 6);
 
 $c-text: $DarkBlue;
 $c-link: $Blue;
 $c-link-hover: $MediumBlue;
 $c-link-visited: $BlueViolet;
+$c-link-active: $c-link-visited;
