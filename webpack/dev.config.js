@@ -29,14 +29,8 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.scss$/, // sass that's NOT in /app/css/ dir - uses the css-modules plugin
-        exclude: [/src\/global.scss/],
+        test: /\.scss$/,
         loaders: ['style?sourceMap', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]', 'sass' ]
-      },
-      {
-        test: /\.scss$/, // sass that IS in /app/css/ dir - doesn't transform the class-names with the css-modules plugin
-        include: [/src\/global.scss/],
-        loaders: [ 'style?sourceMap', 'css', 'sass' ]
       }
     ]
   }
