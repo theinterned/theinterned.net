@@ -1,37 +1,29 @@
-/**
- * React Static Boilerplate
- * https://github.com/koistya/react-static-boilerplate
- * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
- */
 
-@import '../variables.scss';
+@import '../../lib/css/_index.scss';
 
-html, body {
-  margin: 0;
-  padding: 0;
-  background-color: $body-bg;
-  color: $text-color;
-  font-family: $font-family-base;
-}
-
-.Layout {
+html { font-size: 62.5%; } /* =10px */
+body {
+  background-color: $c-background;
+  font-size: 1.6rem; /* =16px */
+  line-height: 2rem;
+  font-family: $sans;
+  color: $c-text;
+  max-width: 84rem;
   margin: 0 auto;
-}
-
-@media (min-width: $screen-sm-min) {
-  .Layout {
-    width: calc($screen-sm-min - 18px);
+  padding: 2rem;
+  @media screen and (min-width:478px) {
+    padding: 4rem 6rem;
   }
 }
-
-@media (min-width: $screen-md-min) {
-  .Layout {
-    width: calc($screen-md-min - 22px);
-  }
+a {
+  @include c-link();
 }
 
-@media (min-width: $screen-lg-min) {
-  .Layout {
-    width: calc($screen-lg-min - 30px);
-  }
+* {
+  margin: 0;
 }
+* + * {
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+}
+.emoji { font-weight: normal; }

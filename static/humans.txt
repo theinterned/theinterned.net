@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Ned Schwartz -- Designer & Developer -- theinterned
 
 # THANKS
 
-    <name>
+    Jes Watson
 
 # TECHNOLOGY COLOPHON
 
