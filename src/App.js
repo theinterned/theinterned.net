@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import '../lib/components/webfontloader';
-import CSSModules from 'react-css-modules';
+import reactCSSModules from 'react-css-modules';
 import globalStyles from '../lib/css/global.scss';
 import styles from './App.scss';
 
 class App extends Component {
   render() {
-    let year = new Date().getFullYear();
+    const year = new Date().getFullYear();
     return (
       <div className="app">
-        <h1 styleName='title'>Hi, I&rsquo;m Ned<br/>
+        <h1 styleName="title">Hi, I&rsquo;m Ned<br/>
           &mdash;<br/>
           I design & build<br/>
           web apps.</h1>
@@ -45,4 +45,4 @@ class App extends Component {
   }
 }
 
-export default CSSModules(App, styles);
+export default reactCSSModules(App, styles);
