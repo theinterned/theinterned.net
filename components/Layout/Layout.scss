@@ -1,0 +1,30 @@
+
+@import '../../lib/css/_index.scss';
+
+html { font-size: 62.5%; } /* =10px */
+body {
+  background-color: $c-background;
+  font-size: 1.6rem; /* =16px */
+  line-height: 2rem;
+  font-family: $sans;
+  color: $c-text;
+  max-width: 84rem;
+  margin: 0 auto;
+  padding: 2rem;
+  @media screen and (min-width:478px) {
+    padding: 4rem 6rem;
+  }
+}
+a {
+  @include c-link();
+}
+
+* {
+  margin: 0;
+}
+* + * {
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+}
+.emoji { font-weight: normal; }
+#app { margin: 0; }

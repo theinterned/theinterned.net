@@ -1,17 +1,19 @@
-@import './colors';
+@import './_colors.scss';
 
-@mixin c-link($normal:$c-link, $hover:$c-link-hover, $active:$c-link-active, $visited:$c-link-visited, $focus:false) {
+@define-mixin c-link $normal:$c-link, $hover:$c-link-hover, $active:$c-link-active, $visited:$c-link-visited, $focus:$c-link {
   color: $normal;
-  @if $visited {
-    &:visited { color: $visited; }
+  &:visited { color: $visited; }
+  &:hover { color: $hover; }
+  &:focus { color: $focus; }
+  &:active { color: $active; }
+  /*
+  @if $visited !== undefined {
   }
-  @if $focus {
-    &:focus { color: $focus; }
+  @if $hover !== undefined {
   }
-  @if $hover {
-    &:hover { color: $hover; }
+   @if $focus != ""{
   }
   @if $active {
-    &:active { color: $active; }
   }
+  */
 }
