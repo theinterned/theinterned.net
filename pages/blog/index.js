@@ -12,7 +12,7 @@ export default class extends Component {
     return (
       <div>
         <h1>Blog</h1>
-        <p>Coming soon.</p>
+        <p>Coming soon (just add some pages to this folder).</p>
       </div>
     );
   }
