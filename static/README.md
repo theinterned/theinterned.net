@@ -62,4 +62,4 @@ $ npm install
 
 **Github page repo:** https://github.com/theinterned/theinterned.github.io
 
-_The code for this site was developed starting from [Konstantin Tarkus's](https://github.com/koistya) [react-sytatic-boilerplate](https://github.com/koistya/react-static-boilerplate)_.
+_The code for this site was developed starting from [react-sytatic-boilerplate](https://github.com/koistya/react-static-boilerplate) by [Konstantin Tarkus](https://github.com/koistya)_.
