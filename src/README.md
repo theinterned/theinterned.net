@@ -58,8 +58,8 @@ $ git merge react-static-boilerplate/master
 $ npm install
 ```
 
-_The code for this site was developed starting from [Konstantin Tarkus's](https://github.com/koistya) [react-sytatic-boilerplate](https://github.com/koistya/react-static-boilerplate)_.
-
 **Source code repo:** https://github.com/theinterned/theinterned.net
 
 **Github page repo:** https://github.com/theinterned/theinterned.github.io
+
+_The code for this site was developed starting from [Konstantin Tarkus's](https://github.com/koistya) [react-sytatic-boilerplate](https://github.com/koistya/react-static-boilerplate)_.
