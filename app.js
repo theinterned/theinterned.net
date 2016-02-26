@@ -25,7 +25,7 @@ function run() {
     route(location.pathname, async (component) => ReactDOM.render(component, container, () => {
       // Track the page view event via Google Analytics
       window.ga('send', 'pageview');
-    }));
+    })).then(()=> document.getElementById('app').className+=' running');
   });
 }
 

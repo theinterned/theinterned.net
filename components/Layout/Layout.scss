@@ -22,9 +22,11 @@ a {
 * {
   margin: 0;
 }
-* + * {
-  margin-top: 2rem;
-  margin-bottom: 0rem;
-}
+
 .emoji { font-weight: normal; }
-#app { margin: 0; }
+#app {
+  margin: 0;
+  transition: opacity .4s;
+  opacity: 0;
+  &.running { opacity: 1; }
+}
