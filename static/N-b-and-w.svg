@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>N-b-and-w</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="N-b-and-w" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Body">
+            <polygon id="Rectangle-1" fill="#000000" points="0 0 48 48 0 48"></polygon>
+            <polygon id="Rectangle-1-Copy" fill="#FFFFFF" points="48 48 -1.5158245e-14 7.57912251e-15 48 1.5158245e-14"></polygon>
+        </g>
+        <g id="border">
+            <polygon id="Rectangle-2-Copy-2" fill="#FFFFFF" transform="translate(24.000000, 24.000000) rotate(-90.000000) translate(-24.000000, -24.000000) " points="42 42 48 48 48 0 0 7.57912251e-15 6 6 42 6"></polygon>
+            <polygon id="Rectangle-2-Copy-3" fill="#000000" transform="translate(24.000000, 24.000000) rotate(-270.000000) translate(-24.000000, -24.000000) " points="42 42 48 48 48 0 -2.84217094e-14 7.57912251e-15 6 6 42 6"></polygon>
+            <polygon id="Rectangle-2-Copy-4" fill="#000000" transform="translate(24.000000, 24.000000) rotate(-90.000000) translate(-24.000000, -24.000000) " points="47 47 48 48 48 4.26325641e-14 7.10542736e-15 5.32907052e-14 1 1 47 1"></polygon>
+        </g>
+    </g>
+</svg>
