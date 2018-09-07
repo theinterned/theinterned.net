@@ -40,6 +40,8 @@ $ npm test
 $ npm run deploy                # Deploys the project to GitHub Pages
 ```
 
+The static build is pushed to the https://github.com/theinterned/theinterned.github.io repo where it is hosted as a Github page.
+
 Alternatively, you can build a production release to manually deploy to S3, Firebase, Netlify, and other static hosts. Simply run the command below and copy the generated `build` folder to your static host.
 
 ```shell
