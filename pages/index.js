@@ -25,7 +25,7 @@ export default class extends Component {
           <li className="link linkdin"><a href="https://ca.linkedin.com/in/neddo">Linkedin</a></li>
         </ul>
         <div className="blurb">
-          <p>I’m a seasoned web developer and designer with over 15 years of
+          <p>I’m a seasoned web developer and designer with almost 20 years of
             experience working on high profile, heavily-trafficked websites.</p>
           <p>Most recently, I was the lead designer and front-end developer
             on <a href="http://getcarta.com" className="carta">Carta</a>, a
