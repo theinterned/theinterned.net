@@ -129,6 +129,14 @@ const Link = styled.a`
   }
 `;
 
+const Footer = styled.footer`
+  text-align: center;
+  clear: left;
+  opacity: .2;
+  transition: opacity 0.15s;
+  &:hover { opacity: 1; }
+`;
+
 class App extends Component {
   render() {
     const year = new Date().getFullYear();
@@ -146,9 +154,9 @@ class App extends Component {
           <LinkItem><Link href="https://ca.linkedin.com/in/neddo">Linkedin</Link></LinkItem>
         </Links>
         
-        <footer className="foot">
-          <p>&copy; {year} Ned Schwartz &bull; <a href="https://raw.githubusercontent.com/theinterned/theinterned.net/master/LICENSE">MIT license</a>.</p>
-        </footer>
+        <Footer>
+          <p>&copy; 2001 – {year} Ned Schwartz &bull; <a href="https://raw.githubusercontent.com/theinterned/theinterned.net/master/LICENSE">MIT license</a>.</p>
+        </Footer>
       </div>
     );
   }
