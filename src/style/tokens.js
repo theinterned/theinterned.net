@@ -1,18 +1,10 @@
 import { lighten } from 'polished';
 
 export const colour = {
-  MistyRose: 'rgb(255,228,225)',
-  AliceBlue: 'rgb(240,248,255)',
-  PowderBlue: 'rgb(176,224,230)',
-  BlueViolet: 'rgb(138,43,226)',
-  Blue: 'rgb(0,0,255)',
-  MediumBlue: 'rgb(0,0,205)',
-  DarkBlue: 'rgb(0,0,139)',
-
   background: 'AliceBlue',
   border: [
     'MistyRose',
-    lighten(0.06, 'PowderBlue'),
+    'PowderBlue',
   ],
   text: 'DarkBlue',
 
