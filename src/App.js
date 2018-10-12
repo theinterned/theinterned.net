@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { borderColor } from 'polished';
 import { colour, font } from './style/tokens';
+import { linkColours } from './style/utils';
 
 const bpLinks = 'screen and (min-width:42rem)';
 
@@ -31,9 +32,13 @@ const Title = styled.h1`
       padding: 18rem 2rem;
     }
   }
-`
+`;
 
-const Links = styled.ul`
+const Link = styled.a`
+  ${linkColours()}
+`;
+
+const Nav = styled.ul`
   list-style: none;
   margin: 0 0 6rem;
   float: left;
@@ -49,7 +54,7 @@ const Links = styled.ul`
   }
 `;
 
-const LinkItem = styled.li`
+const NavItem = styled.li`
   display: block;
   margin: 0;
   font-weight: 600;
@@ -73,15 +78,12 @@ const LinkItem = styled.li`
   }
 `;
 
-const Link = styled.a`
-  color: ${colour.text};
-  &:visited { color: ${colour.linkVisited}; }
-  &:hover { 
-    color: ${colour.linkHover}; 
-    background-color: white;
-  }
-  &:focus { color: ${colour.text}; }
-  &:active { color: ${colour.linkActive}; }
+const NavLink = styled.a`
+  ${linkColours({
+    normal: colour.text,
+    visited: colour.text
+  })}
+  &:hover { background-color: white; }
   text-decoration: none;
   display: block;
   background-color: ${colour.background};
@@ -113,16 +115,16 @@ class App extends Component {
           &mdash;<br/>
           I design & build<br/>
           web apps.</Title>
-        <Links>
-          <LinkItem><Link href="https://www.dropbox.com/s/3jxewz8yj4mg9tz/Ned_Schwartz_CV.pdf?dl=0">CV</Link></LinkItem>
-          <LinkItem><Link href="https://dribbble.com/theinterned">Dribbble</Link></LinkItem>
-          <LinkItem><Link href="https://github.com/theinterned">Github</Link></LinkItem>
-          <LinkItem><Link href="https://www.instapaper.com/p/theinterned">Instapaper</Link></LinkItem>
-          <LinkItem><Link href="https://ca.linkedin.com/in/neddo">Linkedin</Link></LinkItem>
-        </Links>
+        <Nav>
+          <NavItem><NavLink href="https://www.dropbox.com/s/3jxewz8yj4mg9tz/Ned_Schwartz_CV.pdf?dl=0">CV</NavLink></NavItem>
+          <NavItem><NavLink href="https://dribbble.com/theinterned">Dribbble</NavLink></NavItem>
+          <NavItem><NavLink href="https://github.com/theinterned">Github</NavLink></NavItem>
+          <NavItem><NavLink href="https://www.instapaper.com/p/theinterned">Instapaper</NavLink></NavItem>
+          <NavItem><NavLink href="https://ca.linkedin.com/in/neddo">Linkedin</NavLink></NavItem>
+        </Nav>
         
         <Footer>
-          <p>&copy; 2001 – {year} Ned Schwartz &bull; <a href="https://raw.githubusercontent.com/theinterned/theinterned.net/master/LICENSE">MIT license</a>.</p>
+          <p>&copy; 2001 – {year} Ned Schwartz &bull; <Link href="https://raw.githubusercontent.com/theinterned/theinterned.net/master/LICENSE">MIT license</Link>.</p>
         </Footer>
       </>
     );
