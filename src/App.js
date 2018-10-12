@@ -1,48 +1,16 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { lighten, borderColor } from 'polished';
-import logo from './logo.svg';
-
-const colour = {
-  MistyRose: 'rgb(255,228,225)',
-  AliceBlue: 'rgb(240,248,255)',
-  PowderBlue: 'rgb(176,224,230)',
-  BlueViolet: 'rgb(138,43,226)',
-  Blue: 'rgb(0,0,255)',
-  MediumBlue: 'rgb(0,0,205)',
-  DarkBlue: 'rgb(0,0,139)',
-
-  background: 'AliceBlue',
-  border: [
-    'MistyRose',
-    lighten(0.06, 'PowderBlue'),
-  ],
-  text: 'DarkBlue',
-
-  link: 'Blue',
-  linkHover: 'MediumBlue',
-  linkVisited: 'BlueViolet',
-  get linkActive() { return this.linkVisited },
-}
-
-const font = {
-  family: {
-    serif: 'TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif',
-    sans:  '"Avenir Next", Avenir, Frutiger, "Frutiger Linotype", "Segoe UI", Futura, "Century Gothic", CenturyGothic, "Helvetica Neue", Helvetica, sans-serif',
-  }
-}
+import { borderColor } from 'polished';
+import { colour, font } from './style/tokens';
 
 const bpLinks = 'screen and (min-width:42rem)';
-
-console.log('colour', colour);
-console.log('font :', font);
 
 const Title = styled.h1`
   font-size: 4rem;
   line-height: 1;
   margin: -1rem -1rem 3rem;
   padding: 8rem 2rem 10rem;
-  font-family: serif;
+  font-family: ${font.family.serif};
   text-align: center;
   font-style: italic;
   font-weight: normal;
@@ -106,14 +74,13 @@ const LinkItem = styled.li`
 `;
 
 const Link = styled.a`
-  @mixin c-link $c-text, $c-link-hover, $c-link-active, $c-text;
-  color: ${colour.link};
+  color: ${colour.text};
   &:visited { color: ${colour.linkVisited}; }
   &:hover { 
     color: ${colour.linkHover}; 
     background-color: white;
   }
-  &:focus { color: ${colour.link}; }
+  &:focus { color: ${colour.text}; }
   &:active { color: ${colour.linkActive}; }
   text-decoration: none;
   display: block;
@@ -141,7 +108,7 @@ class App extends Component {
   render() {
     const year = new Date().getFullYear();
     return (
-      <div className="page home_page">
+      <>
         <Title>Hi, I&rsquo;m Ned<br/>
           &mdash;<br/>
           I design & build<br/>
@@ -157,7 +124,7 @@ class App extends Component {
         <Footer>
           <p>&copy; 2001 – {year} Ned Schwartz &bull; <a href="https://raw.githubusercontent.com/theinterned/theinterned.net/master/LICENSE">MIT license</a>.</p>
         </Footer>
-      </div>
+      </>
     );
   }
 }
