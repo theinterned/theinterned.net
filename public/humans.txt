@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Ned Schwartz -- Designer & Developer -- theinterned
+
+# THANKS
+
+    Jes Watson
+
+# TECHNOLOGY COLOPHON
+
+    ES6, HTML5, CSS3
+    React, Styled Components
