@@ -40,14 +40,13 @@ const Link = styled.a`
 const Nav = styled.ul`
   list-style: none;
   margin: 0 0 6rem;
-  float: left;
-  width: 100%;
   padding: .2rem 0;
   background-color: white;
-  border-color: $c-border;
+  border-color: ${colour.border[1]};
   border-style: solid;
   border-width: .2rem 0;
   @media ${bpLinks} {
+    display: flex;
     border: 0 none;
     padding: 0;
   }
@@ -56,15 +55,14 @@ const Nav = styled.ul`
 const NavItem = styled.li`
   display: block;
   margin: 0;
+  padding: 0;
   font-weight: 600;
   letter-spacing: .15rem;
-  background-color: white;
   text-align: center;
-  padding: 0;
+  background-color: white;
   @media ${bpLinks} {
+    flex: 1;
     padding: .2rem 0;
-    float: left;
-    width: calc((1/5)*100%);
     border-color: ${colour.border[1]};
     border-style: solid;
     border-width: .2rem 0;
@@ -99,7 +97,6 @@ const NavLink = styled.a`
 
 const Footer = styled.footer`
   text-align: center;
-  clear: left;
   opacity: .2;
   transition: opacity 0.15s;
   &:hover { opacity: 1; }
