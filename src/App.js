@@ -4,6 +4,7 @@ import { colour, font } from './style/tokens';
 import { linkColours } from './style/utils';
 
 const bpLinks = 'screen and (min-width:42rem)';
+const navBorderWidths = '.2rem 0';
 
 const Title = styled.h1`
   font-size: 4rem;
@@ -40,11 +41,11 @@ const Link = styled.a`
 const Nav = styled.ul`
   list-style: none;
   margin: 0 0 6rem;
-  padding: .2rem 0;
+  padding: ${navBorderWidths};
   background-color: white;
   border-color: ${colour.border[1]};
   border-style: solid;
-  border-width: .2rem 0;
+  border-width: ${navBorderWidths};
   @media ${bpLinks} {
     display: flex;
     border: 0 none;
@@ -62,10 +63,10 @@ const NavItem = styled.li`
   background-color: white;
   @media ${bpLinks} {
     flex: 1;
-    padding: .2rem 0;
+    padding: ${navBorderWidths};
     border-color: ${colour.border[1]};
     border-style: solid;
-    border-width: .2rem 0;
+    border-width: ${navBorderWidths};
     transition: padding .2s, margin .2s, background-color .3s .1s;
     &:hover {
       background-color: ${colour.border[1]};
@@ -91,7 +92,7 @@ const NavLink = styled.a`
   border-style: solid;
   border-width: .1rem 0;
   @media $(bp-links) {
-    border-width: .2rem 0;
+    border-width: ${navBorderWidths};
   }
 `;
 
