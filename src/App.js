@@ -114,36 +114,39 @@ const NavLink = styled.a `
   }
 `;
 
-const Footer = styled.footer `
+  const Footer = styled.footer `
   text-align: center;
   opacity: .2;
   transition: opacity 0.15s;
   &:hover { opacity: 1; }
 `;
 
-const App = ({
-  year = new Date().getFullYear()
-}) => (
-  <>
-    <Title>Hi, I&rsquo;m Ned<br/>
-      &mdash;<br/>
-      I design & build<br/>
-      web apps.
-    </Title>
+  const App = ({
+    year = new Date().getFullYear(),
+    links = {
+      CV: 'https://www.dropbox.com/s/3jxewz8yj4mg9tz/Ned_Schwartz_CV.pdf?dl=0',
+      Github: 'https://github.com/theinterned',
+      Twitter: 'https://twitter.com/theinterned',
+      Dribbble: 'https://dribbble.com/theinterned',
+      Linkedin: 'https://ca.linkedin.com/in/neddo'
+    }
+  }) => ( <> <Title>Hi, I&rsquo;m Ned<br/>
+    &mdash;<br/>
+    I design & build<br/>
+    web apps.
+  </Title> < Nav > {
+    Object
+      .entries(links)
+      .map(([title, link]) => (
+        <NavItem>
+          <NavLink href={link}>{title}</NavLink>
+        </NavItem>
+      ))
+  } < /Nav > <Footer>
+    <p>&copy; 2001 – {year}
+      Ned Schwartz &bull;
+      <Link
+        href="https://raw.githubusercontent.com/theinterned / theinterned.net / master / LICENSE ">MIT license</Link>.</p>
+ < /Footer> < / >);
 
-    <Nav>
-      <NavItem><NavLink href="https://www.dropbox.com/s/3jxewz8yj4mg9tz/Ned_Schwartz_CV.pdf?dl=0">CV</NavLink></NavItem>
-      <NavItem><NavLink href="https://medium.com/@theinterned">Medium</NavLink></NavItem>
-      <NavItem><NavLink href="https://github.com/theinterned">Github</NavLink></NavItem>
-      <NavItem><NavLink href="https://twitter.com/theinterned">Twitter</NavLink></NavItem>
-      <NavItem><NavLink href="https://dribbble.com/theinterned">Dribbble</NavLink></NavItem>
-      <NavItem><NavLink href="https://ca.linkedin.com/in/neddo">Linkedin</NavLink></NavItem>
-    </Nav>
-    
-    <Footer>
-      <p>&copy; 2001 – {year} Ned Schwartz &bull; <Link href="https://raw.githubusercontent.com/theinterned/theinterned.net/master/LICENSE">MIT license</Link>.</p>
-    </Footer>
-  </>
-);
-
-export default App;
+  export default App;
