@@ -1,5 +1,3 @@
-import { lighten } from 'polished';
-
 export const colour = {
   background: 'AliceBlue',
   border: [
