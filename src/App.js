@@ -154,7 +154,7 @@ const App = ({
     <Nav>
       {' '}
       {Object.entries(links).map(([title, link]) => (
-        <NavItem>
+        <NavItem key={title}>
           <NavLink href={link}>{title}</NavLink>
         </NavItem>
       ))}{' '}
