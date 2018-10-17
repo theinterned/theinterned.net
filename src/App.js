@@ -135,6 +135,7 @@ class App extends Component {
           <NavItem><NavLink href="https://www.dropbox.com/s/3jxewz8yj4mg9tz/Ned_Schwartz_CV.pdf?dl=0">CV</NavLink></NavItem>
           <NavItem><NavLink href="https://medium.com/@theinterned">Medium</NavLink></NavItem>
           <NavItem><NavLink href="https://github.com/theinterned">Github</NavLink></NavItem>
+          <NavItem><NavLink href="https://twitter.com/theinterned">Twitter</NavLink></NavItem>
           <NavItem><NavLink href="https://dribbble.com/theinterned">Dribbble</NavLink></NavItem>
           <NavItem><NavLink href="https://ca.linkedin.com/in/neddo">Linkedin</NavLink></NavItem>
         </Nav>
