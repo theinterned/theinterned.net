@@ -1,22 +1,22 @@
 export const colour = {
   background: 'AliceBlue',
-  border: [
-    'MistyRose', 'PowderBlue'
-  ],
+  border: ['MistyRose', 'PowderBlue'],
   text: 'DarkBlue',
 
   link: 'Blue',
   linkHover: 'MediumBlue',
   linkVisited: 'BlueViolet',
   get linkActive() {
-    return this.linkVisited
-  }
-}
+    return this.linkVisited;
+  },
+};
 
 export const font = {
   family: {
-    serif: 'Times, TimesNewRoman, "Times New Roman", Baskerville, Georgia, serif',
-    sans: '"Avenir Next", Avenir, Frutiger, "Frutiger Linotype", "Segoe UI", Futura, "Centu' +
-        'ry Gothic", CenturyGothic, "Helvetica Neue", Helvetica, sans-serif'
-  }
-}
+    serif:
+      'Times, TimesNewRoman, "Times New Roman", Baskerville, Georgia, serif',
+    sans:
+      '"Avenir Next", Avenir, Frutiger, "Frutiger Linotype", "Segoe UI", Futura, "Centu' +
+      'ry Gothic", CenturyGothic, "Helvetica Neue", Helvetica, sans-serif',
+  },
+};
