@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colour, font } from './style/tokens';
-import { linkColours } from './style/utils';
+import {colour, font} from './style/tokens';
+import {linkColours} from './style/utils';
 
 const bpLinks = 'screen and (min-width:42rem)';
 const navBorderWidths = '.2rem 0';
 const navBorderColor = colour.border[1];
 
-const Title = styled.h1`
+const Title = styled.h1 `
   font-size: 4rem;
   line-height: 1;
   margin: -1rem -1rem 3rem;
@@ -16,7 +16,7 @@ const Title = styled.h1`
   text-align: center;
   font-style: italic;
   font-weight: normal;
-  border-color: ${[colour.border[0], colour.border[0], colour.border[1], colour.border[1]].join(' ')};
+  border-color: ${ [colour.border[0], colour.border[0], colour.border[1], colour.border[1]].join(' ')};
   border-style: solid;
   border-width: 1.5rem;
   background-color: white;
@@ -34,11 +34,11 @@ const Title = styled.h1`
   }
 `;
 
-const Link = styled.a`
+const Link = styled.a `
   ${linkColours()}
 `;
 
-const Nav = styled.ul`
+const Nav = styled.ul `
   list-style: none;
   margin: 0 0 6rem;
   padding: ${navBorderWidths};
@@ -53,7 +53,7 @@ const Nav = styled.ul`
   }
 `;
 
-const NavItem = styled.li`
+const NavItem = styled.li `
   display: block;
   margin: 0;
   padding: 0;
@@ -92,11 +92,10 @@ const NavItem = styled.li`
   }
 `;
 
-const NavLink = styled.a`
+const NavLink = styled.a `
   ${linkColours({
-    normal: colour.text,
-    visited: colour.text
-  })}
+  normal: colour.text,
+  visited: colour.text})}
 
   &:hover { background-color: white; }
   
@@ -115,7 +114,7 @@ const NavLink = styled.a`
   }
 `;
 
-const Footer = styled.footer`
+const Footer = styled.footer `
   text-align: center;
   opacity: .2;
   transition: opacity 0.15s;

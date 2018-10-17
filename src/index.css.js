@@ -1,7 +1,7 @@
-import { injectGlobal } from 'styled-components';
-import { colour, font } from './style/tokens.js';
+import {injectGlobal} from 'styled-components';
+import {colour, font} from './style/tokens.js';
 
-injectGlobal`
+injectGlobal `
 html { font-size: 62.5%; } /* =10px */
 body {
   background-color: ${colour.background};
