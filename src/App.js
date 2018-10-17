@@ -5,6 +5,7 @@ import { linkColours } from './style/utils';
 
 const bpLinks = 'screen and (min-width:42rem)';
 const navBorderWidths = '.2rem 0';
+const navBorderColor = colour.border[1];
 
 const Title = styled.h1`
   font-size: 4rem;
@@ -42,8 +43,8 @@ const Nav = styled.ul`
   list-style: none;
   margin: 0 0 6rem;
   padding: ${navBorderWidths};
-  background-color: white;
-  border-color: ${colour.border[1]};
+  
+  border-color: ${navBorderColor};
   border-style: solid;
   border-width: ${navBorderWidths};
   @media ${bpLinks} {
@@ -60,16 +61,16 @@ const NavItem = styled.li`
   font-weight: 600;
   letter-spacing: .15rem;
   text-align: center;
-  background-color: white;
+  
   @media ${bpLinks} {
     flex: 1;
     padding: ${navBorderWidths};
-    border-color: ${colour.border[1]};
+    border-color: ${navBorderColor};
     border-style: solid;
     border-width: ${navBorderWidths};
     transition: padding .2s, margin .2s, background-color .3s .1s;
     &:hover {
-      background-color: ${colour.border[1]};
+      background-color: ${navBorderColor};
       padding: .6rem 0;
       margin: -.4rem 0;
     }
@@ -88,9 +89,9 @@ const NavLink = styled.a`
   text-decoration: none;
   transition: background-color .5s .15s;
   padding: 1rem 0;
-  border-color: ${colour.border[1]};
+  border-color: ${navBorderColor};
   border-style: solid;
-  border-width: .1rem 0;
+  border-width: ${navBorderWidths};
   @media $(bp-links) {
     border-width: ${navBorderWidths};
   }
