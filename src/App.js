@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { borderColor } from 'polished';
 import { colour, font } from './style/tokens';
 import { linkColours } from './style/utils';
 
@@ -15,7 +14,7 @@ const Title = styled.h1`
   text-align: center;
   font-style: italic;
   font-weight: normal;
-  ${borderColor(colour.border[0], colour.border[0], colour.border[1], colour.border[1])}
+  border-color: ${[colour.border[0], colour.border[0], colour.border[1], colour.border[1]].join(' ')};
   border-style: solid;
   border-width: 1.5rem;
   background-color: white;
