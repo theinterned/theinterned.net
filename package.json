@@ -4,10 +4,6 @@
   "private": true,
   "homepage": "https://theinterned.net",
   "dependencies": {
-    "gh-pages": "^2.0.1",
-    "husky": "^1.1.2",
-    "lint-staged": "^7.3.0",
-    "prettier": "^1.14.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.4",
@@ -42,6 +38,10 @@
     ]
   },
   "devDependencies": {
-    "eslint-config-prettier": "^3.1.0"
+    "eslint-config-prettier": "^3.1.0",
+    "gh-pages": "^2.0.1",
+    "husky": "^1.1.2",
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.14.3"
   }
 }
