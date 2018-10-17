@@ -16,7 +16,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -b cra -d build"
+    "deploy": "gh-pages --dist build --branch master --repo https://github.com/theinterned/theinterned.github.io.git"
   },
   "eslintConfig": {
     "extends": "react-app"
