@@ -20,18 +20,17 @@ const Title = styled.h1`
   border-style: solid;
   border-width: 1.5rem;
   background-color: white;
-  @media screen {
-    @media (min-width: 321px), (min-height: 569px) { /* > iphone 5 screen */
-      font-size: 5rem;
-    }
-    @media (min-width: 376px) and (max-height: 415px), (min-height: 628px) { /* > iphone 6 screen */
-      padding: 10rem 2rem 12rem;
-      margin: 0 0 3rem;
-    }
-    @media (min-width: 415px) and (min-height: 737px) { /* > iphone 6+ screen */
-      font-size: 6rem;
-      padding: 18rem 2rem;
-    }
+
+  @media (min-width: 321px), (min-height: 569px) { /* > iphone 5 screen */
+    font-size: 5rem;
+  }
+  @media (min-width: 376px) and (max-height: 415px), (min-height: 628px) { /* > iphone 6 screen */
+    padding: 10rem 2rem 12rem;
+    margin: 0 0 3rem;
+  }
+  @media (min-width: 415px) and (min-height: 737px) { /* > iphone 6+ screen */
+    font-size: 6rem;
+    padding: 18rem 2rem;
   }
 `;
 
@@ -43,10 +42,10 @@ const Nav = styled.ul`
   list-style: none;
   margin: 0 0 6rem;
   padding: ${navBorderWidths};
-  
   border-color: ${navBorderColor};
   border-style: solid;
   border-width: ${navBorderWidths};
+
   @media ${bpLinks} {
     display: flex;
     border: 0 none;
@@ -61,19 +60,35 @@ const NavItem = styled.li`
   font-weight: 600;
   letter-spacing: .15rem;
   text-align: center;
+  border-color: ${navBorderColor};
+  border-style: solid;
+  border-width: 0;
+
+  &:first-child {
+    border-top-width: 0.1rem;
+  }
+  &:last-child {
+    border-bottom-width: 0.1rem;
+  }
   
   @media ${bpLinks} {
     flex: 1;
     padding: ${navBorderWidths};
-    border-color: ${navBorderColor};
-    border-style: solid;
-    border-width: ${navBorderWidths};
+    background-color: ${colour.background};
     transition: padding .2s, margin .2s, background-color .3s .1s;
+
+    &, 
+    &:first-child, 
+    &:last-child {
+      border-width: ${navBorderWidths};
+    }
+
     &:hover {
       background-color: ${navBorderColor};
       padding: .6rem 0;
       margin: -.4rem 0;
     }
+    
   }
 `;
 
@@ -82,7 +97,9 @@ const NavLink = styled.a`
     normal: colour.text,
     visited: colour.text
   })}
+
   &:hover { background-color: white; }
+  
   text-decoration: none;
   display: block;
   background-color: ${colour.background};
@@ -91,8 +108,9 @@ const NavLink = styled.a`
   padding: 1rem 0;
   border-color: ${navBorderColor};
   border-style: solid;
-  border-width: ${navBorderWidths};
-  @media $(bp-links) {
+  border-width: 0.1rem 0;
+
+  @media ${bpLinks} {
     border-width: ${navBorderWidths};
   }
 `;
