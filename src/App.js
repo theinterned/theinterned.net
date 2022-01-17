@@ -162,7 +162,7 @@ const App = ({
     <Footer>
       <p>
         &copy; 2001 – {year}
-        Ned Schwartz &bull;
+        &nbsp;Ned Schwartz &bull;
         <Link href="https://raw.githubusercontent.com/theinterned / theinterned.net / master / LICENSE ">
           MIT license
         </Link>
